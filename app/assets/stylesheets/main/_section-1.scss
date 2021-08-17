@@ -1,0 +1,29 @@
+.main-section{
+  height: 720px;
+  background: url("../images/bg-main.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed, scroll;
+  position: relative;
+}
+
+.main-block{
+  position: absolute;
+  top: 448px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  background-color: $dark-blue;
+  width: 990px;
+  padding: 50px 140px 55px;
+}
+
+.main-title{
+  display: block;
+  font-size: 42px;
+  line-height: 55px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: $condensed;
+  font-weight: 700;
+  color: $light-blue;
+}
