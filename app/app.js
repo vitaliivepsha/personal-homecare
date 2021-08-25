@@ -71,6 +71,34 @@ $(function() {
     cursorChar: '|',
   });
 
+  var typed_lang = new Typed('.lang-typing__text', {
+    strings: ['English', 'Russian', 'Korean', 'Chinese', 'Vietnames', 'Arabic', 'Farsi', 'Uzbek', 'Spanish'],
+    typeSpeed: 100,
+    backSpeed: 50,
+    loop: true,
+    loopCount: Infinity,
+    showCursor: true,
+    cursorChar: '|',
+  });
+
+  // animations
+
+  var doAnimations = function() {
+    var offset = $(window).scrollTop() + $(window).height(),
+      $animatables = $('.animate');
+    if ($animatables.length == 0) {
+      $(window).off('scroll', doAnimations);
+    }
+    $animatables.each(function(i) {
+      var $animatable = $(this);
+      if (($animatable.offset().top + $animatable.height() - 20) < offset) {
+        $animatable.removeClass('animate').addClass('animated');
+      }
+    });
+  };
+  $(window).on('scroll', doAnimations);
+  $(window).trigger('scroll');
+
   // mobile menu
 
   var touch = $('.mobile-menu__btn');
@@ -93,8 +121,12 @@ $(function() {
   $(touch).click(function(e) {
     e.preventDefault();
     menu.toggle();
-    $('body').toggleClass('active');
+    $('body').toggleClass('opened-menu');
     return false;
+  });
+
+  $('.mobile-menu li.has-children span').click(function() {
+    $(this).closest('li').toggleClass('active').find('ul').slideToggle();
   });
 
   // lazy load

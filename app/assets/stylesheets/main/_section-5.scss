@@ -1,0 +1,77 @@
+.section-consult{
+  padding: 80px 0 100px;
+  @include bp(xs){
+    padding: 60px 0 36px;
+  }
+  .section-subtitle{
+    color: $light-blue;
+    margin-bottom: 10px;
+  }
+  .section-title{
+    color: #fff;
+    margin-bottom: 22px;
+    @include bp(xs){
+      margin-bottom: 27px;
+    }
+  }
+}
+
+.consult-form{
+  background-color: $dark-blue;
+  border-radius: 2px;
+  padding: 54px 100px 48px;
+  @include bp(sm){
+    padding: 40px 30px;
+  }
+  @include bp(xs){
+    padding: 30px 26px 44px;
+  }
+  .input-wrapper{
+    margin-bottom: 30px;
+    @include bp(xs){
+      margin-bottom: 20px;
+    }
+    >label{
+      color: #fff;
+      font-size: 16px;
+      line-height: 130%;
+      font-weight: 400;
+      font-family: $condensed;
+      margin-bottom: 7px;
+      text-transform: uppercase;
+      @include bp(sm){
+        font-size: 14px;
+      }
+      @include bp(xs){
+        display: block;
+        font-size: 12px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .btn{
+    width: 300px;
+    max-width: 100%;
+    margin: 10px auto 0;
+    @include bp(xs){
+      width: 100%;
+      margin-top: 7px;
+      font-size: 16px;
+    }
+  }
+}
+
+.consult-form__row{
+  display: flex;
+  justify-content: space-between;
+  @include bp(xs){
+    flex-direction: column;
+  }
+  >div{
+    position: relative;
+    width: calc(50% - 15px);
+    @include bp(xs){
+      width: 100%;
+    }
+  }
+}
