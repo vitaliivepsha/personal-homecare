@@ -3,7 +3,18 @@
 'use strict';
 
 if (process.env.NODE_ENV !== 'production') {
-  require('./assets/templates/layouts/index.html');
+    require('./assets/templates/layouts/index.html');
+    require('./assets/templates/layouts/about-team.html');
+    require('./assets/templates/layouts/about-mission.html');
+    require('./assets/templates/layouts/services.html');
+    require('./assets/templates/layouts/services-palliative.html');
+    require('./assets/templates/layouts/services-personal.html');
+    require('./assets/templates/layouts/services-health.html');
+    require('./assets/templates/layouts/services-skilled-nursing.html');
+    require('./assets/templates/layouts/services-transitional.html');
+    require('./assets/templates/layouts/services-assisted.html');
+    require('./assets/templates/layouts/career.html');
+    require('./assets/templates/layouts/career-details.html');
 }
 
 // Depends
@@ -27,92 +38,92 @@ import Typed from 'typed.js';
 require('_stylesheets/app.scss');
 
 // Are you ready?
-$(function() {
-  new Forms();
-  new Popup();
-  new Fancy_select();
-  new Jscrollpane();
-  new LightGallery();
-  new Slider();
-  new Jslider();
-  new Fancybox();
+$(function () {
+    new Forms();
+    new Popup();
+    new Fancy_select();
+    new Jscrollpane();
+    new LightGallery();
+    new Slider();
+    new Jslider();
+    new Fancybox();
 
-  setTimeout(function() {
-    $('body').trigger('scroll');
-  }, 100);
+    setTimeout(function () {
+        $('body').trigger('scroll');
+    }, 100);
 
-  // fixed header
+    // fixed header
 
-  if ($(window).width() >= 768) {
-    var header = $('.header'),
-      scrollPrev = 0;
+    if ($(window).width() >= 768) {
+        var header = $('.header'),
+            scrollPrev = 0;
 
-    $(window).scroll(function() {
-      var scrolled = $(window).scrollTop();
+        $(window).scroll(function () {
+            var scrolled = $(window).scrollTop();
 
-      if (scrolled > 180 && scrolled > scrollPrev) {
-        header.addClass('fixed');
-      } else {
-        header.removeClass('fixed');
-      }
-      scrollPrev = scrolled;
+            if (scrolled > 180 && scrolled > scrollPrev) {
+                header.addClass('fixed');
+            } else {
+                header.removeClass('fixed');
+            }
+            scrollPrev = scrolled;
+        });
+    }
+
+    // typed text
+
+    var typed_main = new Typed('.typed-main', {
+        strings: ['Exceptional Care, in the comfort of your loved one’s home'],
+        typeSpeed: 60,
+        backSpeed: 20,
+        loop: true,
+        loopCount: Infinity,
+        showCursor: true,
+        cursorChar: '|',
     });
-  }
 
-  // typed text
+    // mobile menu
 
-  var typed_main = new Typed('.typed-main', {
-    strings: ['Exceptional Care, in the comfort of your loved one’s home'],
-    typeSpeed: 60,
-    backSpeed: 20,
-    loop: true,
-    loopCount: Infinity,
-    showCursor: true,
-    cursorChar: '|',
-  });
+    var touch = $('.mobile-menu__btn');
+    var menu = $('.mobile-menu__wrapper');
 
-  // mobile menu
+    var toggles = document.querySelectorAll('.mobile-menu__btn');
 
-  var touch = $('.mobile-menu__btn');
-  var menu = $('.mobile-menu__wrapper');
+    for (var i = toggles.length - 1; i >= 0; i--) {
+        var toggle = toggles[i];
+        toggleHandler(toggle);
+    }
 
-  var toggles = document.querySelectorAll('.mobile-menu__btn');
+    function toggleHandler(toggle) {
+        toggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            (this.classList.contains('active') === true) ? this.classList.remove('active') : this.classList.add('active');
+        });
+    }
 
-  for (var i = toggles.length - 1; i >= 0; i--) {
-    var toggle = toggles[i];
-    toggleHandler(toggle);
-  }
-
-  function toggleHandler(toggle) {
-    toggle.addEventListener( 'click', function(e) {
-      e.preventDefault();
-      (this.classList.contains('active') === true) ? this.classList.remove('active') : this.classList.add('active');
+    $(touch).click(function (e) {
+        e.preventDefault();
+        menu.toggle();
+        $('body').toggleClass('active');
+        return false;
     });
-  }
 
-  $(touch).click(function(e) {
-    e.preventDefault();
-    menu.toggle();
-    $('body').toggleClass('active');
-    return false;
-  });
+    // lazy load
+    var lazyload = function () {
+        var scroll = $(window).scrollTop() + $(window).height() * 3;
 
-  // lazy load
-  var lazyload = function() {
-    var scroll = $(window).scrollTop() + $(window).height() * 3;
-
-    $('.lazy').each(function() {
-      var $this = $(this);
-      if ($this.offset().top < scroll) {
-        $this.attr('src', $(this).data('original'));
-      }
-    });
-    $('.lazy-web').each(function() {
-      var $this = $(this);
-      if ($this.offset().top < scroll) {
-        $this.attr('srcset', $(this).data('original'));
-      }
-    });
-  };
-  $(window).scroll(lazyload);
+        $('.lazy').each(function () {
+            var $this = $(this);
+            if ($this.offset().top < scroll) {
+                $this.attr('src', $(this).data('original'));
+            }
+        });
+        $('.lazy-web').each(function () {
+            var $this = $(this);
+            if ($this.offset().top < scroll) {
+                $this.attr('srcset', $(this).data('original'));
+            }
+        });
+    };
+    $(window).scroll(lazyload);
 });

@@ -1,0 +1,226 @@
+.main[class*="services-"] {
+  & .section-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 256px;
+    margin-bottom: 30px;
+
+    @media (min-width: 576px) {
+      height: 500px;
+      margin-bottom: 60px;
+    }
+
+    &__title {
+      max-width: 276px;
+      margin: 0;
+      margin-bottom: 17px;
+      font-family: "RobotoCondensed", sans-serif;
+      font-size: 24px;
+      line-height: 28px;
+      font-weight: 700;
+      color: #ffffff;
+      text-align: center;
+      text-transform: uppercase;
+
+      @media (min-width: 576px) {
+        margin-bottom: 25px;
+        max-width: 600px;
+        font-size: 50px;
+        line-height: 60px;
+      }
+
+      @media (min-width: 768px) {
+        max-width: 1000px;
+
+        font-size: 60px;
+        line-height: 70px;
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: contain;
+
+        @media (min-width: 768px) {
+          margin-bottom: 25px;
+          width: 66px;
+          height: 66px;
+        }
+      }
+    }
+  }
+}
+
+.content {
+  max-width: 730px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+
+  @media (min-width: 768px) {
+    padding-bottom: 80px;
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 22px;
+    color: $dark-blue;
+
+    @media (min-width: 768px) {
+      font-size: 21px;
+      line-height: 29px;
+      margin-bottom: 30px;
+    }
+
+    & span {
+      color: $accent;
+      font-weight: 700;
+    }
+  }
+
+  &__list {
+    margin-bottom: 45px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 55px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 30px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 13px;
+      top: 9px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: $dark-blue;
+
+      @media (min-width: 768px) {
+        top: 13px;
+      }
+    }
+  }
+
+  &__back {
+    position: relative;
+    padding-left: 30px;
+    font-family: $condensed, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    color: $blue;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 11px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+      width: 6px;
+      height: 9px;
+      background-image: url("../images/arrow-left2.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 6px 9px;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+}
+
+.services-palliative {
+  & .section-main {
+    background: url("../images/bg-main-04m.jpg") no-repeat center;
+    background-size: cover;
+
+    @media (min-width: 576px) {
+      background: url("../images/bg-main-04.jpg") no-repeat center top;
+    }
+
+    &__title {
+      &:before {
+        // решить
+        background-image: url("../images/icon02.svg");
+      }
+    }
+  }
+}
+.services-personal {
+  & .section-main {
+    background: url("../images/bg-main-05.jpg") no-repeat center;
+    background-size: cover;
+
+    &__title {
+      &:before {
+        background-image: url("../images/icon02.svg");
+      }
+    }
+  }
+}
+.services-health {
+  & .section-main {
+    background: url("../images/bg-main-06.jpg") no-repeat center;
+    background-size: cover;
+
+    &__title {
+      &:before {
+        background-image: url("../images/icon03.svg");
+      }
+    }
+  }
+}
+.services-skilled-nursing {
+  & .section-main {
+    background: url("../images/bg-main-07.jpg") no-repeat center;
+    background-size: cover;
+
+    &__title {
+      &:before {
+        background-image: url("../images/icon04.svg");
+      }
+    }
+  }
+}
+.services-assisted {
+  & .section-main {
+    background: url("../images/bg-main-09.jpg") no-repeat center;
+    background-size: cover;
+
+    &__title {
+      &:before {
+        background-image: url("../images/icon06.svg");
+      }
+    }
+  }
+}
+.services-transitional {
+  & .section-main {
+    background: url("../images/bg-main-08.jpg") no-repeat center;
+    background-size: cover;
+
+    &__title {
+      &:before {
+        background-image: url("../images/icon05.svg");
+      }
+    }
+  }
+}
