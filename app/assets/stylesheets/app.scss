@@ -157,7 +157,7 @@ main {
   text-transform: uppercase;
   border-radius: 2px;
   outline: none !important;
-  >span{
+  > span {
     display: flex;
     align-items: center;
   }
@@ -173,11 +173,11 @@ main {
   &.btn-dark {
     border-color: $dark-blue;
     color: $dark-blue;
-    &:hover{
+    &:hover {
       background-color: $dark-blue;
       color: #fff;
-      svg{
-        path{
+      svg {
+        path {
           fill: #fff;
         }
       }
@@ -186,11 +186,11 @@ main {
   &.btn-light {
     border-color: $light-blue;
     color: $light-blue;
-    &:hover{
+    &:hover {
       background-color: $light-blue;
       color: $dark-blue;
-      svg{
-        path{
+      svg {
+        path {
           fill: $dark-blue;
         }
       }
@@ -206,19 +206,19 @@ main {
   &.btn-filled {
     background-color: $mid-blue;
     color: #fff;
-    &__accent{
+    &__accent {
       border-color: $accent;
       background-color: $accent;
       color: #fff;
-      svg{
-        path{
+      svg {
+        path {
           fill: #fff;
         }
       }
-      &:hover{
+      &:hover {
         color: $accent;
-        svg{
-          path{
+        svg {
+          path {
             fill: $accent;
           }
         }
@@ -228,15 +228,15 @@ main {
       border-color: $light-blue;
       background-color: $light-blue;
       color: $dark-blue;
-      svg{
-        path{
+      svg {
+        path {
           fill: $dark-blue;
         }
       }
-      &:hover{
+      &:hover {
         color: $light-blue;
-        svg{
-          path{
+        svg {
+          path {
             fill: $light-blue;
           }
         }
@@ -248,7 +248,7 @@ main {
     font-size: 16px;
     line-height: 21px;
   }
-  svg{
+  svg {
     margin-left: 5px;
   }
 }
@@ -257,14 +257,14 @@ main {
   width: 100%;
   padding: 0 15px;
   height: 40px;
-  background: #F5F5F5;
+  background: #f5f5f5;
   border-radius: 2px;
   box-shadow: none;
   font-size: 14px;
   color: $dark-blue;
   border: none;
   font-weight: bold;
-  @include bp(xs){
+  @include bp(xs) {
     height: 35px;
     padding: 0 10px;
     font-size: 12px;
@@ -328,9 +328,6 @@ main {
 // about-team
 @import "about-team";
 
-// about-why
-@import "about-why";
-
 // services
 @import "services";
 
@@ -356,10 +353,10 @@ main {
 @import "footer";
 
 // Contact Us
-@import 'contact-us';
+@import "contact-us";
 
 // About
-@import 'about';
+@import "about";
 
 // Blog post page
 @import "blog";
@@ -375,4 +372,4 @@ main {
 @import "popup";
 
 // Animations
-@import 'animations';
+@import "animations";
