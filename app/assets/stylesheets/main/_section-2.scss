@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // ссылка назад
 
 .btn-back {
@@ -65,3 +66,262 @@
     line-height: 21px;
   }
 }
+=======
+.section-what{
+  padding-top: 285px;
+  padding-bottom: 80px;
+  position: relative;
+  @include bp(sm){
+    padding-top: 335px;
+  }
+  @include bp(xs){
+    padding-top: 325px;
+    padding-bottom: 40px;
+  }
+  &:before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 745px;
+    background: #F5F5F5;
+    left: 0;
+    top: 0;
+    @include bp(xs){
+      height: 164vw;
+    }
+    @include bp(xxs){
+      height: 205vw;
+    }
+  }
+  .section-subtitle{
+    margin-bottom: 5px;
+  }
+  .section-title{
+    margin-bottom: 15px;
+    @include bp(xs){
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.section-subtitle{
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  line-height: 28px;
+  color: $mid-blue;
+  @include bp(xs){
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.section-title{
+  display: block;
+  text-align: center;
+  font-family: $condensed;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 55px;
+  text-transform: uppercase;
+  @include bp(xs){
+    font-size: 21px;
+    line-height: 28px;
+  }
+}
+
+.what-descr{
+  width: 960px;
+  max-width: 100%;
+  margin: 0 auto 20px;
+  text-align: center;
+  @include bp(xs){
+    font-size: 16px;
+    line-height: 140%;
+    margin-bottom: 10px;
+  }
+}
+
+.what-pics{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.what-pic__left{
+  width: 100%;
+  border-radius: 2px;
+  overflow: hidden;
+  height: 450px;
+  @include bp(md){
+    display: none;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.what-pic__right{
+  width: 100%;
+  border-radius: 2px;
+  overflow: hidden;
+  height: 450px;
+  @include bp(md){
+    width: 100%;
+  }
+  @include bp(xs){
+    height: 64vw;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.what-text{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  @include bp(xs){
+    margin-top: 20px;
+  }
+}
+
+.what-text__left{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: $dark-blue;
+  padding: 30px 78px 35px;
+  border-radius: 2px;
+  @include bp(xs){
+    padding: 30px 13px 27px;
+  }
+  >svg{
+    display: block;
+    margin: 0 auto 30px;
+    @include bp(xs){
+      width: 42px;
+      height: 42px;
+      margin-bottom: 18px;
+    }
+  }
+  >span{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 7px;
+    @include bp(xs){
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 9px;
+    }
+  }
+  >div{
+    font-family: $condensed;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: $accent;
+    @include bp(xs){
+      font-size: 21px;
+      line-height: 28px;
+    }
+  }
+  >p{
+    color: rgba(229, 229, 229, 0.9);
+    margin-bottom: 25px;
+    @include bp(xs){
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+  }
+  .btn{
+    width: 260px;
+    margin: 0 auto;
+    @include bp(xs){
+      width: 238px;
+      font-size: 16px;
+    }
+  }
+}
+
+.what-text__right{
+  width: 100%;
+  height: 100%;
+  background-color: $blue;
+  padding: 30px 15px;
+  text-align: center;
+  border-radius: 2px;
+  @include bp(md){
+    margin-top: 30px;
+  }
+  @include bp(xs){
+    margin-top: 20px;
+    padding: 30px 6px;
+    height: auto;
+  }
+  >svg{
+    display: block;
+    margin: 0 auto 30px;
+    @include bp(xs){
+      width: 42px;
+      height: 42px;
+      margin-bottom: 25px;
+    }
+  }
+  >div{
+    font-family: $condensed;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: $dark-blue;
+    @include bp(xs){
+      font-size: 21px;
+      line-height: 28px;
+      color: #fff;
+      margin-bottom: 17px;
+    }
+  }
+  >span{
+    font-family: $condensed;
+    font-weight: 700;
+    display: block;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    width: 350px;
+    max-width: 100%;
+    margin: 0 auto 10px;
+    @include bp(xs){
+      font-size: 16px;
+      line-height: 21px;
+      margin-bottom: 15px;
+      color: $dark-blue;
+    }
+  }
+  >ul{
+    color: $dark-blue;
+    margin-bottom: 25px;
+    @include bp(xs){
+      font-size: 16px;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+  }
+  .btn{
+    width: 260px;
+    margin: 0 auto;
+    @include bp(xs){
+      width: 238px;
+      font-size: 16px;
+    }
+  }
+}
+>>>>>>> 1dda3e60a1db165445165517703df49559eee155

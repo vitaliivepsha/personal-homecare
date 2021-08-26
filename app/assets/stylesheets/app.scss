@@ -26,15 +26,28 @@ body {
   @include bp(md) {
     display: block;
   }
+<<<<<<< HEAD
   &.active {
     overflow: hidden;
     .header {
       background-color: rgba(16, 19, 64, 0.9);
+=======
+  &.opened-menu{
+    overflow: hidden;
+    height: 100vh;
+    .header{
+      z-index: 1021;
+    }
+    .header-main{
+      position: absolute;
+      top: -60px;
+>>>>>>> 1dda3e60a1db165445165517703df49559eee155
     }
   }
   &.swal2-shown {
     position: static;
   }
+<<<<<<< HEAD
   &.show-menu {
     .side-menu {
       transform: translateX(0);
@@ -44,6 +57,8 @@ body {
       z-index: 1022;
     }
   }
+=======
+>>>>>>> 1dda3e60a1db165445165517703df49559eee155
 }
 
 ol,
@@ -185,7 +200,14 @@ main {
   text-transform: uppercase;
   border-radius: 2px;
   outline: none !important;
+<<<<<<< HEAD
   > span {
+=======
+  @include bp(xs){
+    height: 40px;
+  }
+  >span{
+>>>>>>> 1dda3e60a1db165445165517703df49559eee155
     display: flex;
     align-items: center;
   }
@@ -201,16 +223,45 @@ main {
   &.btn-dark {
     border-color: $dark-blue;
     color: $dark-blue;
+<<<<<<< HEAD
     &:hover {
+=======
+    svg{
+      path{
+        fill: $dark-blue;
+      }
+    }
+    &:hover{
+>>>>>>> 1dda3e60a1db165445165517703df49559eee155
       background-color: $dark-blue;
+      color: #fff;
+      svg{
+        path{
+          fill: #fff;
+        }
+      }
     }
   }
   &.btn-light {
     border-color: $light-blue;
     color: $light-blue;
+<<<<<<< HEAD
     &:hover {
+=======
+    svg{
+      path{
+        fill: $light-blue;
+      }
+    }
+    &:hover{
+>>>>>>> 1dda3e60a1db165445165517703df49559eee155
       background-color: $light-blue;
       color: $dark-blue;
+      svg{
+        path{
+          fill: $dark-blue;
+        }
+      }
     }
   }
   &.btn-accent {
@@ -223,15 +274,59 @@ main {
   &.btn-filled {
     background-color: $mid-blue;
     color: #fff;
+<<<<<<< HEAD
     &__accent {
+=======
+    svg{
+      path{
+        fill: $mid-blue;
+      }
+    }
+    &:hover{
+      background-color: transparent;
+      color: $mid-blue;
+      svg{
+        path{
+          fill: $mid-blue;
+        }
+      }
+    }
+    &__accent{
+>>>>>>> 1dda3e60a1db165445165517703df49559eee155
       border-color: $accent;
       background-color: $accent;
       color: #fff;
+      svg{
+        path{
+          fill: #fff;
+        }
+      }
+      &:hover{
+        color: $accent;
+        svg{
+          path{
+            fill: $accent;
+          }
+        }
+      }
     }
     &__light {
       border-color: $light-blue;
       background-color: $light-blue;
       color: $dark-blue;
+      svg{
+        path{
+          fill: $dark-blue;
+        }
+      }
+      &:hover{
+        color: $light-blue;
+        svg{
+          path{
+            fill: $light-blue;
+          }
+        }
+      }
     }
   }
   &.btn-sm {
@@ -239,29 +334,42 @@ main {
     font-size: 16px;
     line-height: 21px;
   }
+<<<<<<< HEAD
   svg {
     margin-left: 3px;
+=======
+  svg{
+    margin-left: 5px;
+>>>>>>> 1dda3e60a1db165445165517703df49559eee155
   }
 }
 
 .input {
   width: 100%;
-  padding: 0 25px;
-  height: 55px;
-  background: #fff;
-  box-shadow: 0 10px 50px rgba(48, 98, 145, 0.08);
-  border-radius: 8px;
-  font-size: 16px;
+  padding: 0 15px;
+  height: 40px;
+  background: #F5F5F5;
+  border-radius: 2px;
+  box-shadow: none;
+  font-size: 14px;
   color: $dark-blue;
   border: none;
+<<<<<<< HEAD
   font-weight: bold;
   @include bp(xs) {
     height: 45px;
     padding: 0 15px;
+=======
+  font-weight: 400;
+  @include bp(xs){
+    height: 35px;
+    padding: 0 10px;
+    font-size: 12px;
+>>>>>>> 1dda3e60a1db165445165517703df49559eee155
   }
   &::placeholder {
     font-weight: 400;
-    color: rgba(2, 7, 62, 0.4);
+    color: $mid-blue;
   }
   &:focus {
     &::placeholder {
@@ -294,7 +402,7 @@ main {
 }
 
 ::selection {
-  background: rgba(39, 211, 159, 0.75);
+  background: rgba(131, 210, 255, 0.4);
   color: #fff;
   text-shadow: none;
 }
@@ -355,4 +463,11 @@ main {
 @import "breadcrumbs";
 
 // Popup
+<<<<<<< HEAD
 @import "popup";
+=======
+@import 'popup';
+
+// Animations
+@import 'animations';
+>>>>>>> 1dda3e60a1db165445165517703df49559eee155

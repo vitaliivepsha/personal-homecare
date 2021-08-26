@@ -91,7 +91,39 @@ $(function () {
     var touch = $('.mobile-menu__btn');
     var menu = $('.mobile-menu__wrapper');
 
+<<<<<<< HEAD
     var toggles = document.querySelectorAll('.mobile-menu__btn');
+=======
+  var typed_lang = new Typed('.lang-typing__text', {
+    strings: ['English', 'Russian', 'Korean', 'Chinese', 'Vietnames', 'Arabic', 'Farsi', 'Uzbek', 'Spanish'],
+    typeSpeed: 100,
+    backSpeed: 50,
+    loop: true,
+    loopCount: Infinity,
+    showCursor: true,
+    cursorChar: '|',
+  });
+
+  // animations
+
+  var doAnimations = function() {
+    var offset = $(window).scrollTop() + $(window).height(),
+      $animatables = $('.animate');
+    if ($animatables.length == 0) {
+      $(window).off('scroll', doAnimations);
+    }
+    $animatables.each(function(i) {
+      var $animatable = $(this);
+      if (($animatable.offset().top + $animatable.height() - 20) < offset) {
+        $animatable.removeClass('animate').addClass('animated');
+      }
+    });
+  };
+  $(window).on('scroll', doAnimations);
+  $(window).trigger('scroll');
+
+  // mobile menu
+>>>>>>> 1dda3e60a1db165445165517703df49559eee155
 
     for (var i = toggles.length - 1; i >= 0; i--) {
         var toggle = toggles[i];
@@ -105,11 +137,46 @@ $(function () {
         });
     }
 
+<<<<<<< HEAD
     $(touch).click(function (e) {
         e.preventDefault();
         menu.toggle();
         $('body').toggleClass('active');
         return false;
+=======
+  for (var i = toggles.length - 1; i >= 0; i--) {
+    var toggle = toggles[i];
+    toggleHandler(toggle);
+  }
+
+  function toggleHandler(toggle) {
+    toggle.addEventListener( 'click', function(e) {
+      e.preventDefault();
+      (this.classList.contains('active') === true) ? this.classList.remove('active') : this.classList.add('active');
+    });
+  }
+
+  $(touch).click(function(e) {
+    e.preventDefault();
+    menu.toggle();
+    $('body').toggleClass('opened-menu');
+    return false;
+  });
+
+  $('.mobile-menu li.has-children span').click(function() {
+    $(this).closest('li').toggleClass('active').find('ul').slideToggle();
+  });
+
+  // lazy load
+  var lazyload = function() {
+    var scroll = $(window).scrollTop() + $(window).height() * 3;
+
+    $('.lazy').each(function() {
+      var $this = $(this);
+      if ($this.offset().top < scroll) {
+        $this.attr('src', $(this).data('original'));
+      }
+>>>>>>> 1dda3e60a1db165445165517703df49559eee155
     });
 
     // lazy load

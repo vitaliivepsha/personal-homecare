@@ -9,13 +9,30 @@
   &.fixed{
     .header-top{
       margin-top: -60px;
+      @include bp(md){
+        margin-top: 0;
+      }
     }
+    /*+.header-spacer{
+      +.mobile-menu__wrapper{
+        +main{
+          .main-section{
+            background: url("../images/bg-main.jpg") no-repeat center 0;
+          }
+        }
+      }
+    }*/
   }
 }
 
 .header-top{
   background-color: $dark-blue;
   transition: linear .3s;
+  @include bp(md){
+    box-shadow: 0 0 20px rgba(56, 56, 56, 0.2);
+    background-color: #fff;
+    position: relative;
+  }
 }
 
 .header-top__wrapper{
@@ -24,12 +41,26 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include bp(md){
+    height: 50px;
+    padding: 11px 0;
+  }
+}
+
+.header-logo__mob{
+  display: none;
+  @include bp(xs){
+    display: block;
+  }
 }
 
 .header-lang__wrapper{
   min-width: 160px;
   width: max-content;
   position: relative;
+  @include bp(md){
+    display: none;
+  }
 }
 
 .header-lang{
@@ -64,6 +95,15 @@
   li{
     padding: 0 18px;
     position: relative;
+    @include bp(md){
+      display: none;
+      padding: 0;
+    }
+    &.header-phone{
+      @include bp(md){
+        display: block;
+      }
+    }
     &:after{
       position: absolute;
       content: '';
@@ -73,6 +113,9 @@
       width: 1px;
       height: 24px;
       background-color: #C4C4C4;
+      @include bp(md){
+        display: none;
+      }
     }
     &:last-child{
       &:after{
@@ -88,14 +131,27 @@
       font-family: $condensed;
       transition: linear .2s;
       color: #fff;
+      @include bp(md){
+        color: $dark-blue;
+      }
       &:hover{
         text-decoration: none;
         color: $light-blue;
+        svg{
+          path{
+            @include bp(md){
+              fill: $light-blue;
+            }
+          }
+        }
       }
       svg{
         margin-right: 4px;
         path{
           fill: $light-blue;
+          @include bp(md){
+            fill: $mid-blue;
+          }
         }
       }
     }
@@ -112,6 +168,11 @@
   justify-content: center;
   height: 88px;
   padding: 15px 0;
+  @include bp(md){
+    height: 60px;
+    padding: 10px 0;
+    justify-content: space-between;
+  }
 }
 
 .header-logo{
@@ -119,6 +180,12 @@
   align-items: center;
   width: 262px;
   height: 58px;
+  @include bp(sm){
+    margin-right: 15px;
+  }
+  @include bp(xs){
+    display: none;
+  }
   img{
     width: 100%;
     height: 100%;
@@ -130,12 +197,16 @@
   display: flex;
   justify-content: center;
   flex: 1 0 auto;
+  padding: 0 20px;
   @include bp(md){
     display: none;
   }
   >li{
     padding: 0 15px;
     position: relative;
+    @include bp(lg){
+      padding: 0 10px;
+    }
     &:after{
       position: absolute;
       content: '';
@@ -181,6 +252,9 @@
       top: calc(100% + 5px);
       padding: 4px 0 0;
       right: 15px;
+      @include bp(lg){
+        right: 10px;
+      }
       >li{
         >a, >span{
           display: block;
@@ -260,14 +334,35 @@
 
 .header-buttons{
   display: flex;
+  @include bp(xs){
+    width: 100%;
+    justify-content: space-between;
+  }
+  .btn{
+    @include bp(sm){
+      font-size: 14px;
+    }
+    @include bp(xs){
+      font-size: 12px;
+      min-width: 105px;
+      width: calc(40% - 4px);
+    }
+  }
   .btn-filled__accent{
     margin-right: 15px;
+    @include bp(xs){
+      width: calc(60% - 4px);
+      margin-right: 0;
+    }
   }
 }
 
 .header-spacer{
   height: 148px;
   width: 100%;
+  @include bp(md){
+    height: 110px;
+  }
 }
 
 .mobile-menu__btn{
@@ -275,8 +370,8 @@
   overflow: hidden;
   margin: 0;
   padding: 0;
-  width: 30px;
-  height: 20px;
+  width: 35px;
+  height: 26px;
   cursor: pointer;
   transition: background 0.3s;
   position: relative;
@@ -288,12 +383,14 @@
   span{
     display: block;
     position: absolute;
-    top: 9px;
-    left: 0;
-    right: 0;
+    width: 26px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+    right: 5px;
     height: 2px;
     border-radius: 1px;
-    background-color: #fff;
+    background-color: $dark-blue;
     transition: background .3s;
     &:before{
       position: absolute;
@@ -302,9 +399,9 @@
       width: 100%;
       height: 2px;
       border-radius: 1px;
-      background-color: #fff;
+      background-color: $dark-blue;
       content: '';
-      top: -8px;
+      top: -7px;
       transition-duration: 0.3s, 0.3s;
       transition-delay: 0.3s, 0;
       transition-property: top, transform;
@@ -316,9 +413,9 @@
       width: 100%;
       height: 2px;
       border-radius: 1px;
-      background-color: #fff;
+      background-color: $dark-blue;
       content: '';
-      bottom: -8px;
+      bottom: -7px;
       transition-duration: 0.3s, 0.3s;
       transition-delay: 0.3s, 0;
       transition-property: top, transform;
@@ -348,30 +445,159 @@
   right: 0;
   bottom: 0;
   max-width: 100vw;
-  background-color: rgba(16, 19, 64, 0.9);
-  top: 80px;
+  background-color: #fff;
+  top: 50px;
   z-index: 1020;
   overflow: auto;
-  text-align: center;
-  @include bp(xs){
-    top: 66px;
-  }
-  .container{
-    height: 100%;
+}
+
+.mobile-menu__inner{
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.mobile-menu__top{
+  padding: 30px 15px 0;
+  width: 100%;
+}
+
+.mobile-menu{
+  font-family: $condensed;
+  >li{
     display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .header-menu{
-    flex-direction: column;
-    align-items: center;
-    @include bp(md){
-      display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+    >a{
+      color: $dark-blue;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 21px;
+      text-transform: uppercase;
+      &:hover{
+        text-decoration: none;
+        color: $accent;
+      }
     }
-    li{
-      padding: 20px;
-      a, span{
-        font-size: 26px;
+    >span{
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 5px;
+      svg{
+        transform: scale(1, -1);
+      }
+    }
+    &.has-children{
+      &.active{
+        >span{
+          svg{
+            transform: scale(1, 1);
+          }
+        }
+      }
+    }
+    ul{
+      width: 100%;
+      padding-left: 14px;
+      padding-top: 16px;
+      padding-bottom: 2px;
+      li{
+        font-size: 16px;
+        line-height: 21px;
+        margin-bottom: 10px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+        a{
+          color: $mid-blue;
+          text-decoration: none;
+          &:hover{
+            text-decoration: none;
+            color: $accent;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobile-menu__bot{
+  width: 100%;
+  .header-buttons{
+    padding: 20px 15px 26px;
+    justify-content: center;
+    @include bp(xs){
+      justify-content: space-between;
+    }
+  }
+}
+
+.mobile-menu__contacts-wrapper{
+  background-color: $dark-blue;
+  padding: 20px 20px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .header-lang__wrapper{
+    @include bp(md){
+      display: block;
+    }
+  }
+}
+
+.mobile-menu__address{
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #fff;
+  font-family: $condensed;
+  margin-bottom: 17px;
+  svg{
+    margin-right: 3px;
+  }
+}
+
+.mobile-menu__contacts{
+  display: flex;
+  font-size: 16px;
+  line-height: 21px;
+  font-family: $condensed;
+  margin-bottom: 20px;
+  li{
+    padding-right: 30px;
+    position: relative;
+    &:after{
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 24px;
+      background-color: #C4C4C4;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:last-child{
+      padding-right: 0;
+      &:after{
+        display: none;
+      }
+    }
+    a{
+      color: #fff;
+      display: flex;
+      align-items: center;
+      text-decoration: underline;
+      svg{
+        margin-right: 5px;
+      }
+      &:hover{
+        text-decoration: none;
       }
     }
   }
