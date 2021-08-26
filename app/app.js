@@ -4,6 +4,8 @@
 
 if (process.env.NODE_ENV !== 'production') {
   require('./assets/templates/layouts/index.html');
+  require('./assets/templates/layouts/contact-us.html');
+  require('./assets/templates/layouts/about.html');
 }
 
 // Depends
@@ -61,25 +63,29 @@ $(function() {
 
   // typed text
 
-  var typed_main = new Typed('.typed-main', {
-    strings: ['Exceptional Care, in the comfort of your loved one’s home'],
-    typeSpeed: 60,
-    backSpeed: 20,
-    loop: true,
-    loopCount: Infinity,
-    showCursor: true,
-    cursorChar: '|',
-  });
+  if ($('.typed-main').length) {
+    var typed_main = new Typed('.typed-main', {
+      strings: ['Exceptional Care, in the comfort of your loved one’s home'],
+      typeSpeed: 60,
+      backSpeed: 20,
+      loop: true,
+      loopCount: Infinity,
+      showCursor: true,
+      cursorChar: '|',
+    });
+  }
 
-  var typed_lang = new Typed('.lang-typing__text', {
-    strings: ['English', 'Russian', 'Korean', 'Chinese', 'Vietnames', 'Arabic', 'Farsi', 'Uzbek', 'Spanish'],
-    typeSpeed: 100,
-    backSpeed: 50,
-    loop: true,
-    loopCount: Infinity,
-    showCursor: true,
-    cursorChar: '|',
-  });
+  if ($('.lang-typing__text').length) {
+    var typed_lang = new Typed('.lang-typing__text', {
+      strings: ['English', 'Russian', 'Korean', 'Chinese', 'Vietnames', 'Arabic', 'Farsi', 'Uzbek', 'Spanish'],
+      typeSpeed: 100,
+      backSpeed: 50,
+      loop: true,
+      loopCount: Infinity,
+      showCursor: true,
+      cursorChar: '|',
+    });
+  }
 
   // animations
 
