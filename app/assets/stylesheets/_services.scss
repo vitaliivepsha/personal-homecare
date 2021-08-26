@@ -1,0 +1,553 @@
+.services {
+  // section section-main
+  & .section-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 256px;
+    margin-bottom: 40px;
+    background: url("../images/bg-main-03m.jpg") no-repeat center top;
+    background-size: cover;
+
+    @media (min-width: 576px) {
+      height: 500px;
+      margin-bottom: 60px;
+      background: url("../images/bg-main-03.jpg") no-repeat center top;
+    }
+
+    &__title {
+      margin: 0;
+      margin-bottom: 20px;
+      max-width: 256px;
+      font-family: "RobotoCondensed", sans-serif;
+      font-size: 42px;
+      line-height: 49px;
+      font-weight: 700;
+      color: #ffffff;
+      text-align: center;
+      text-transform: uppercase;
+
+      @media (min-width: 576px) {
+        max-width: 540px;
+        margin-bottom: 50px;
+        font-size: 62px;
+        line-height: 79px;
+      }
+
+      @media (min-width: 768px) {
+        max-width: 734px;
+        font-size: 84px;
+        line-height: 98px;
+      }
+    }
+  }
+
+  // section uniqueness
+  & .uniqueness {
+    &__title {
+      max-width: 400px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      font-family: $condensed, sans-serif;
+      font-size: 24px;
+      line-height: 28px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $dark-blue;
+      text-align: center;
+
+      @media (min-width: 768px) {
+        max-width: 695px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        font-size: 42px;
+        line-height: 49px;
+      }
+    }
+
+    &__bg {
+      min-height: 197px;
+      background-color: $accent;
+      background-image: url("../images/pic3m.jpg");
+      background-repeat: no-repeat;
+      background-position: right -140px center;
+      background-size: contain;
+
+      @media (min-width: 576px) {
+        min-height: 350px;
+        background-image: url("../images/pic3.jpg");
+        background-position: right -314px center;
+        background-size: cover;
+      }
+
+      @media (min-width: 768px) {
+        min-height: 450px;
+        background-size: 785px 450px;
+      }
+
+      @media (min-width: 1200px) {
+        background-position: right -357px center;
+      }
+
+      @media (min-width: 1540px) {
+        background-position: right 0 center;
+      }
+    }
+    // ==========================================================
+    & .uniqueness__inner {
+      min-width: 290px;
+      max-width: 540px;
+      margin: 0 auto;
+      margin-top: -115px;
+      padding: 20px 4px;
+      border-radius: 2px;
+      background-color: $dark-blue;
+
+      @media (min-width: 360px) {
+        padding: 30px 10px;
+      }
+
+      @media (min-width: 768px) {
+        margin-bottom: 53px;
+      }
+
+      @media (min-width: 992px) {
+        max-width: 725px;
+        margin-top: -368px;
+        min-height: 450px;
+        margin-left: 15px;
+      }
+      @media (min-width: 1200px) {
+        max-width: 825px;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        width: 46px;
+        height: 46px;
+        margin: 0 auto;
+        margin-bottom: 6px;
+        background-image: url("../images/hard.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        @media (min-width: 768px) {
+          width: 76px;
+          height: 76px;
+          margin-bottom: 26px;
+        }
+      }
+    }
+    // ---------------------------
+
+    & .uniqueness__title-in {
+      max-width: 210px;
+      margin: 0 auto;
+      margin-bottom: 12px;
+      font-size: 21px;
+      line-height: 25px;
+      font-weight: 700;
+      font-family: $condensed, sans-serif;
+      color: $accent;
+      text-transform: uppercase;
+      text-align: center;
+
+      @media (min-width: 768px) {
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+    // ---------------------------
+
+    & .uniqueness__text {
+      margin: 0;
+      color: $light-blue;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: center;
+      margin-bottom: 15px;
+
+      @media (min-width: 768px) {
+        margin: 0 auto;
+        margin-bottom: 12px;
+        max-width: 629px;
+        font-size: 21px;
+        line-height: 29px;
+      }
+    }
+
+    // ---------------------------
+
+    & .uniqueness__text-more {
+      max-width: 227px;
+      margin: 0 auto;
+      color: $light-blue;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      margin-bottom: 15px;
+
+      @media (min-width: 768px) {
+        max-width: 590px;
+        margin: 0 auto;
+        margin-bottom: 12px;
+        font-size: 21px;
+        line-height: 25px;
+      }
+    }
+    // ---------------------------
+
+    & .uniqueness__generally {
+      max-width: 262px;
+      margin: 0 auto;
+      font-family: $condensed, sans-serif;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 700;
+      text-align: center;
+      color: #ffffff;
+
+      @media (min-width: 768px) {
+        margin: 0 auto;
+        max-width: 468px;
+        font-size: 24px;
+        line-height: 34px;
+      }
+    }
+
+    // ===================================================
+  }
+
+  // section advantages
+  & .advantages {
+    margin-bottom: 40px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 43px;
+    }
+    &__title {
+      font-family: $condensed, sans-serif;
+      font-size: 21px;
+      line-height: 25px;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+      color: $mid-blue;
+
+      @media (min-width: 768px) {
+        margin-bottom: 30px;
+        font-size: 42px;
+        line-height: 49px;
+      }
+    }
+
+    &__list {
+      @media (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        justify-content: center;
+      }
+
+      @media (min-width: 1200px) {
+        width: 1110px;
+        margin: 0 auto;
+        column-gap: 30px;
+      }
+    }
+    & .advantages-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 540px;
+      min-height: 350px;
+      margin: 0 auto;
+      padding-left: 9px;
+      padding-right: 9px;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      margin-bottom: 20px;
+      border-radius: 2px;
+      background-color: $dark-blue;
+
+      @media (min-width: 768px) {
+        width: 540px;
+        min-height: 530px;
+      }
+
+      @media (min-width: 1200px) {
+        margin-bottom: 30px;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        width: 49px;
+        height: 50px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: contain;
+      }
+
+      // advantages-item icons ->
+      &.palliative {
+        &::before {
+          width: 46px;
+          height: 46px;
+
+          background-image: url("../images/icon01.svg");
+
+          @media (min-width: 768px) {
+            width: 66px;
+            height: 66px;
+            margin-bottom: 37px;
+          }
+        }
+      }
+
+      &.personal {
+        &::before {
+          width: 47px;
+          height: 39px;
+          background-image: url("../images/icon02.svg");
+
+          @media (min-width: 768px) {
+            width: 66px;
+            height: 55px;
+            margin-bottom: 33px;
+          }
+        }
+      }
+
+      &.health {
+        &::before {
+          width: 45px;
+          height: 46px;
+          background-image: url("../images/icon03.svg");
+
+          @media (min-width: 768px) {
+            width: 65px;
+            height: 66px;
+            margin-bottom: 5px;
+          }
+        }
+      }
+
+      &.skilled {
+        &::before {
+          width: 33px;
+          height: 47px;
+          background-image: url("../images/icon04.svg");
+
+          @media (min-width: 768px) {
+            width: 42px;
+            height: 60px;
+            margin-bottom: 19px;
+          }
+        }
+      }
+
+      &.transitional {
+        &::before {
+          width: 45px;
+          height: 50px;
+          background-image: url("../images/icon05.svg");
+
+          @media (min-width: 768px) {
+            width: 56px;
+            height: 53px;
+            margin-bottom: 9px;
+          }
+        }
+      }
+
+      &.assisted {
+        &::before {
+          width: 42px;
+          height: 42px;
+          background-image: url("../images/icon06.svg");
+
+          @media (min-width: 768px) {
+            width: 57px;
+            height: 57px;
+            margin-bottom: 15px;
+          }
+        }
+      }
+      // advantages-item icons <-
+
+      &__title {
+        max-width: 202px;
+        margin: 0 auto;
+        margin-bottom: 11px;
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 700;
+        font-family: $condensed, sans-serif;
+        text-align: center;
+        color: $light-blue;
+
+        @media (min-width: 768px) {
+          max-width: 100%;
+          margin-bottom: 13px;
+          font-size: 24px;
+          line-height: 28px;
+        }
+      }
+
+      &__inner {
+        margin-bottom: 20px;
+
+        @media (min-width: 768px) {
+          margin-bottom: 35px;
+        }
+      }
+
+      &__text {
+        display: flex;
+        justify-content: center;
+        & span {
+          display: inline;
+          padding-left: 16px;
+          font-size: 14px;
+          line-height: 20px;
+          color: #f5f5f5;
+          text-align: center;
+
+          @media (min-width: 768px) {
+            font-size: 18px;
+            line-height: 25px;
+          }
+
+          &::before {
+            content: "";
+            display: inline-block;
+            width: 11px;
+            height: 12px;
+            margin-right: 4px;
+            background-image: url("../images/mark.png");
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: 11px 12px;
+
+            @media (min-width: 768px) {
+              width: 14px;
+              height: 14px;
+              margin-right: 11px;
+              background-size: 14px 14px;
+            }
+          }
+        }
+
+        &.advantages-item__text--mark span {
+          &::before {
+            left: 39px;
+          }
+        }
+      }
+
+      &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 238px;
+        height: 40px;
+        margin: 0 auto;
+        padding: 2px;
+        border: 1px solid $light-blue;
+        font-family: $condensed, sans-serif;
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 700;
+        border-radius: 2px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #83d2ff;
+
+        & svg {
+          margin-left: 13px;
+          width: 6px;
+          fill: $light-blue;
+        }
+      }
+    }
+
+    &__care {
+      max-width: 540px;
+      min-height: 350px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+      padding: 26px;
+      padding-top: 77px;
+      background-color: $accent;
+
+      @media (min-width: 768px) {
+        margin-bottom: 80px;
+      }
+
+      @media (min-width: 576px) {
+        padding-top: 100px;
+      }
+
+      @media (min-width: 1200px) {
+        max-width: 1110px;
+        min-height: 323px;
+      }
+
+      &-plan {
+        max-width: 237px;
+        margin: 0 auto;
+        margin-bottom: 19px;
+        font-family: $condensed, sans-serif;
+        font-size: 21px;
+        line-height: 25px;
+        font-weight: 700;
+        color: #ffffff;
+        text-transform: uppercase;
+        text-align: center;
+
+        @media (min-width: 576px) {
+          max-width: 540px;
+        }
+
+        @media (min-width: 1200px) {
+          max-width: 700px;
+          margin-bottom: 26px;
+          font-size: 24px;
+          line-height: 28px;
+        }
+
+        & span {
+          display: block;
+
+          @media (min-width: 576px) {
+            display: inline-block;
+          }
+        }
+      }
+      &-adaptive {
+        max-width: 238px;
+        margin: 0 auto;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        color: #ffffff;
+
+        @media (min-width: 576px) {
+          max-width: 382px;
+        }
+
+        @media (min-width: 1200px) {
+          max-width: 540px;
+          font-size: 18px;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,72 @@
+<<<<<<< HEAD
+// ссылка назад
+
+.btn-back {
+  position: relative;
+  padding-left: 20px;
+  font-family: $condensed, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: $blue;
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    display: block;
+    width: 6px;
+    height: 9px;
+    background-image: url("../images/arrow-left2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 6px 9px;
+  }
+}
+
+// ссылка вперед
+
+.btn-next {
+  position: relative;
+  padding-left: 0;
+  font-family: $condensed, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: $blue;
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    right: -22px;
+    bottom: 6px;
+    display: block;
+    width: 6px;
+    height: 9px;
+    background-image: url("../images/arrow-left2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 6px 9px;
+    transform: rotate(180deg);
+  }
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+=======
 .section-what{
   padding-top: 285px;
   padding-bottom: 80px;
@@ -255,3 +324,4 @@
     }
   }
 }
+>>>>>>> 1dda3e60a1db165445165517703df49559eee155
