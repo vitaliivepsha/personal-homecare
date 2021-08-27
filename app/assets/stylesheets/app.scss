@@ -125,7 +125,7 @@ main {
     font-size: 12px;
     line-height: 16px;
     right: 6px;
-    top: 6px;
+    top: 8px;
     text-align: left;
     padding: 0;
     transform: none;
@@ -133,6 +133,10 @@ main {
     pointer-events: all;
     font-family: $default;
     font-weight: 400;
+    @include bp(xs){
+      top: 0;
+      font-size: 11px;
+    }
   }
 }
 
@@ -157,6 +161,9 @@ main {
   text-transform: uppercase;
   border-radius: 2px;
   outline: none !important;
+  @include bp(xs){
+    height: 40px;
+  }
   >span{
     display: flex;
     align-items: center;
@@ -206,6 +213,10 @@ main {
   &.btn-filled {
     background-color: $mid-blue;
     color: #fff;
+    &:hover{
+      background-color: transparent;
+      color: $mid-blue;
+    }
     &__accent{
       border-color: $accent;
       background-color: $accent;
@@ -216,6 +227,7 @@ main {
         }
       }
       &:hover{
+        background-color: transparent;
         color: $accent;
         svg{
           path{
@@ -234,6 +246,7 @@ main {
         }
       }
       &:hover{
+        background-color: transparent;
         color: $light-blue;
         svg{
           path{
@@ -263,14 +276,20 @@ main {
   font-size: 14px;
   color: $dark-blue;
   border: none;
-  font-weight: bold;
   @include bp(xs){
     height: 35px;
     padding: 0 10px;
     font-size: 12px;
   }
+  &:-webkit-autofill{
+    transition: background-color 0s ease-in-out 0s;
+    -webkit-box-shadow: 0 0 0px 1000px #F5F5F5 inset;
+    &:focus, &:hover, &:active{
+      transition: background-color 0s ease-in-out 0s;
+      -webkit-box-shadow: 0 0 0px 1000px #F5F5F5 inset;
+    }
+  }
   &::placeholder {
-    font-weight: 400;
     color: $mid-blue;
   }
   &:focus {
@@ -282,24 +301,70 @@ main {
 
 .textarea {
   width: 100%;
-  padding: 12px 25px;
-  height: 85px;
-  background: #fff;
-  box-shadow: 0 10px 50px rgba(48, 98, 145, 0.08);
-  border-radius: 8px;
-  font-size: 16px;
+  padding: 12px 15px;
+  background: #F5F5F5;
+  box-shadow: none;
+  border-radius: 2px;
+  font-size: 14px;
+  line-height: 130%;
   color: $dark-blue;
   border: none;
   resize: none;
-  font-weight: bold;
+  @include bp(xs){
+    padding: 10px;
+    font-size: 12px;
+  }
+  &:-webkit-autofill{
+    transition: background-color 0s ease-in-out 0s;
+    -webkit-box-shadow: 0 0 0px 1000px #F5F5F5 inset;
+    &:focus, &:hover, &:active{
+      transition: background-color 0s ease-in-out 0s;
+      -webkit-box-shadow: 0 0 0px 1000px #F5F5F5 inset;
+    }
+  }
   &::placeholder {
-    font-weight: 400;
-    color: rgba(2, 7, 62, 0.4);
+    color: $mid-blue;
   }
   &:focus {
     &::placeholder {
       color: transparent;
     }
+  }
+}
+
+.select-wrapper{
+  width: 100%;
+  position: relative;
+  select{
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0 15px;
+    font-size: 14px;
+    color: $dark-blue;
+    background: #F5F5F5;
+    border: none;
+    height: 40px;
+    border-radius: 2px;
+    box-shadow: none;
+    @include bp(xs){
+      height: 35px;
+      padding: 0 10px;
+      font-size: 12px;
+    }
+    option{
+      &:disabled{
+        display: none;
+      }
+    }
+  }
+  svg{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    right: 15px;
   }
 }
 

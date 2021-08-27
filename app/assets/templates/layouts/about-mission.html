@@ -19,31 +19,31 @@
   ${require('../parts/header.html')}
   <main class="main about-mission">
     <div class="section section-main">
-      <h1 class="section-main__title">
+      <h1 class="section-main__title animate fadeInUp">
         mission and vision
       </h1>
     </div>
     <div class="container">
       <div class="about-mission-img">
-        <div class="about-mission-img__one">
+        <div class="about-mission-img__one animate fadeInUp">
           <picture>
             <source media="(min-width: 480px)" srcset="../../images/mis-01.jpg">
             <img src="../../images/mis-01m.jpg" alt="image">
           </picture>
         </div>
-        <div class="about-mission-img__two">
+        <div class="about-mission-img__two animate fadeInUp">
           <img src="../../images/mis-02.jpg" alt="image">
         </div>
       </div>
 
       <div class="description">
-        <div class="description__box mission">
+        <div class="description__box mission animate fadeInUp">
           <p class="description__title">mission</p>
           <p class="description__text">To provide high-quality, compassionate home care that supports the physical and
             emotional wellbeing of our clients,
             empowering them to lead dignified and independent lives in the comfort of their own homes.</p>
         </div>
-        <div class="description__box vision">
+        <div class="description__box vision animate fadeInUp">
           <p class="description__title">vision</p>
           <p class="description__text">To be the best choice for home care in the Baltimore Washington area by
             continuing to support our clients’ wellbeing
@@ -57,14 +57,14 @@
     </div>
     <div class="section values">
       <div class="container">
-        <h2 class="values__title">values</h2>
-        <p class="values__subtitle">We bring the <span>care</span> to home care.</p>
+        <h2 class="values__title animate fadeInUp">values</h2>
+        <p class="values__subtitle animate fadeInUp">We bring the <span>care</span> to home care.</p>
         <div class="values__inner">
           <div class="values__img">
-            <img src="../../images/pic-care.svg" alt="values care">
+            <img src="../../images/pic-care.svg" alt="values care" class="animate fadeInUp">
           </div>
 
-          <div class="values__about values__about--compassion">
+          <div class="values__about values__about--compassion animate fadeInUp">
             <h3 class="values__about-title">C – Compassion</h3>
             <p class="values__about-text">Our caregivers serve you with passion and empathy. Our caregivers are happy
               to
@@ -77,7 +77,7 @@
             </p>
           </div>
 
-          <div class="values__about values__about--action">
+          <div class="values__about values__about--action animate fadeInUp">
             <h3 class="values__about-title">A – Action</h3>
             <p class="values__about-text">We take <span>action</span> to assist our clients. Our role is not about
               sitting back. Our
@@ -87,7 +87,7 @@
               morecomfortable, more independent lives for our clients.</p>
           </div>
 
-          <div class="values__about values__about--respect">
+          <div class="values__about values__about--respect animate fadeInUp">
             <h3 class="values__about-title">R – Respect</h3>
             <p class="values__about-text">Life is a journey. We are all at different stages. But one thing we can all
               have in common is respect for one another.
@@ -96,7 +96,7 @@
               with <span>respect.</span> </p>
           </div>
 
-          <div class="values__about values__about--exellence">
+          <div class="values__about values__about--exellence animate fadeInUp">
             <h3 class="values__about-title">E – Excellence</h3>
             <p class="values__about-text">We are driven to consistently achieve the highest standards of
               <span>excellence</span> with
@@ -105,15 +105,11 @@
           </div>
 
         </div>
-
-
       </div>
     </div>
+    ${require('../parts/consult-form.html')}
   </main>
   ${require('../parts/footer.html')}
-
-  <div class="overlay"></div>
-  <div class="mfp-hide"></div>
 </body>
 
 </html>

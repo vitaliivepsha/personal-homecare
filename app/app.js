@@ -7,7 +7,6 @@ if (process.env.NODE_ENV !== 'production') {
   require('./assets/templates/layouts/contact-us.html');
   require('./assets/templates/layouts/about.html');
   require('./assets/templates/layouts/index.html');
-  require('./assets/templates/layouts/about-why.html');
   require('./assets/templates/layouts/about-team.html');
   require('./assets/templates/layouts/about-mission.html');
   require('./assets/templates/layouts/services.html');
@@ -151,6 +150,11 @@ $(function() {
     $(this).closest('li').toggleClass('active').find('ul').slideToggle();
   });
 
+  // upload file
+
+  $('#file').change(function() {
+    $(this).next('label').find('span').text($('#file')[0].files[0].name);
+  });
 
   // lazy load
   var lazyload = function() {
