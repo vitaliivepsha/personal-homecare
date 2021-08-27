@@ -21,6 +21,7 @@ if (process.env.NODE_ENV !== 'production') {
   require('./assets/templates/layouts/news.html');
   require('./assets/templates/layouts/article.html');
   require('./assets/templates/layouts/article-fill.html');
+  require('./assets/templates/layouts/404.html');
 }
 
 // Depends
